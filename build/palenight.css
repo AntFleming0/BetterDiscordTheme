@@ -563,19 +563,19 @@ body {
 .theme-light,
 body {
     /* Main backgrounds - matching VSCode layout */
-    --background-primary: #292D3E !important; /* Main chat area - editor background */
-    --background-secondary: #25293A !important; /* Server list - sidebar */
-    --background-secondary-alt: #25293A !important; /* Friends list */
-    --background-tertiary: #25293A !important; /* Server channels, members list */
+    --background-primary: #292D3E !important; /* Main chat area - editor background (LIGHTER) */
+    --background-secondary: #25293A !important; /* Server list - sidebar (DARKER) */
+    --background-secondary-alt: #25293A !important; /* Friends list (DARKER) */
+    --background-tertiary: #25293A !important; /* Server channels, members list (DARKER) */
     --background-accent: #31364a !important;
     --background-floating: #25293A !important;
     --background-mobile-primary: #292D3E !important;
     --background-mobile-secondary: #25293A !important;
     --background-modifier-accent: rgba(126, 87, 194, 0.3) !important;
     
-    /* Chat input and activity areas - custom variables */
-    --background-base-lower: #25293A !important; /* Chat input box background */
-    --chat-background-default: #25293A !important; /* Chat input area */
+    /* Chat input and activity areas - IMPORTANT: Use LIGHTER color for main panels */
+    --background-base-lower: #292D3E !important; /* Main panels including chat area - LIGHTER */
+    --chat-background-default: #25293A !important; /* Chat input area - DARKER */
     --bg-backdrop: #25293A !important;
     --bg-backdrop-no-opacity: #25293A !important;
     --channeltextarea-background: #25293A !important;
@@ -589,20 +589,28 @@ body {
 }
 
 /* Direct element targeting to ensure correct colors */
-.chatContent_f75fb0,
-.chat_f75fb0 {
+.visual-refresh .chatContent_f75fb0 {
     background-color: #292D3E !important; /* Lighter color for main chat area */
 }
 
-.channelTextArea_f75fb0,
-.form_f75fb0,
-.messagesWrapper__36d07 {
+/* Override chat input and activity to use DARKER color */
+.visual-refresh .channelTextArea_f75fb0,
+.visual-refresh .form_f75fb0 {
     background-color: #25293A !important; /* Darker color for input areas */
 }
 
-.panels__5e434,
-.container__11d72,
-.activityPanel__0b6c8 {
+/* Sidebars and channels use DARKER color */
+.visual-refresh .guilds__5e434,
+.visual-refresh .sidebarList__5e434,
+.visual-refresh .container_c8ffbb {
+    background-color: #25293A !important; /* Darker for sidebars */
+}
+
+/* Activity panel bottom left - DARKER color */
+.visual-refresh .panels__5e434,
+.visual-refresh .container__11d72,
+div[class*="activityPanel"],
+div[class*="panels"][class*="container"] {
     background-color: #25293A !important; /* Activity panel at bottom */
 }
 
