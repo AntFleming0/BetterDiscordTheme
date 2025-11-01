@@ -1,0 +1,217 @@
+body {
+    --top-bar-height: 32px;
+    --custom-app-top-bar-height: var(--top-bar-height);
+}
+
+@property --top-bar-button-position {
+    syntax: 'off | hide | serverlist | titlebar';
+    inherits: false;
+    initial-value: titlebar;
+}
+
+.platform-osx.visual-refresh .wrapper_ef3116 {
+    margin-top: max(0px, calc(36px - var(--top-bar-height)));
+}
+
+@container body style(--top-bar-button-position: hide) {
+    .visual-refresh {
+        .trailing_c38106 > a[href="https://support.discord.com"],
+        .recentsIcon_c99c29,
+        .winButtons_c38106::before {
+            display: none;
+        }
+    }
+}
+
+@container body style(--top-bar-button-position: serverlist) {
+    .visual-refresh {
+        /* remove help button */
+        .trailing_c38106 > a[href="https://support.discord.com"],
+        .winButtons_c38106::before {
+            display: none;
+        }
+
+        /* make server list inner scroll */
+        .stack_dbd263:not([id='guild-list-unread-dms']) {
+            overflow: hidden scroll;
+            scrollbar-width: none;
+        }
+        /* create space for inbox button */
+        .tutorialContainer__1f388 {
+            margin-bottom: 48px;
+        }
+        /* move inbox button */
+        .recentsIcon_c99c29 {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
+            left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
+        }
+        /* style inbox button */
+        .recentsIcon_c99c29 .button__85643 {
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-surface-higher);
+            border-radius: var(--radius-md);
+            transition: background-color 0.15s ease-out;
+
+            &:hover {
+                background-color: var(--bg-brand);
+
+                .icon__9293f {
+                    color: var(--white);
+                }
+            }
+        }
+        .recentsIcon_c99c29 .svg__2338f {
+            transition: color 0.15s ease-out;
+            width: 24px;
+            height: 24px;
+        }
+        /* shift inbox popup panel into view */
+        .recentMentionsPopout__95796 {
+            transform: translateX(100%);
+        }
+        /* fix settings animation transform */
+        .layer__960e4.baseLayer__960e4 {
+            transform: none !important;
+        }
+        .layers__960e4 > .layer__960e4.animating__960e4 {
+            will-change: opacity;
+        }
+
+        /* unread icon */
+        .recentsIcon_c99c29 .iconBadge__9293f {
+            --custom-icon-offset: 8px;
+            width: 10px;
+            height: 10px;
+            transition: background 0.15s ease-out;
+        }
+
+        .recentsIcon_c99c29:hover .iconBadge__9293f {
+            background: var(--white);
+        }
+    }
+}
+
+@container body style(--top-bar-button-position: titlebar) {
+    #app-mount {
+        --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
+        --top-bar-right-margin: calc(32px + var(--space-xs));
+    }
+
+    .visual-refresh {
+        .title_c38106, 
+        .trailing_c38106 > a[href="https://support.discord.com"]
+        {
+            display: none;
+        }
+        .trailing_c38106 {
+            position: absolute;
+            top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
+            right: calc(var(--gap) + var(--border-thickness));
+            gap: var(--space-xs);
+            z-index: 1000;
+            padding-right: var(--space-xs);
+        }
+        .systemBar_c38106 .trailing_c38106 {
+            top: var(--space-xs);
+        }
+        .winButtons_c38106 {
+            padding: 0;
+        }
+        .winButton_c38106 {
+            height: calc(var(--window-control-size) * 2);
+        }
+        .winButtons_c38106::before {
+            height: 16px;
+            width: var(--space-xs);
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .toolbar__9293f {
+            padding-right: var(--top-bar-right-margin);
+        }
+        .headerBar__8a7fc {
+            padding-right: calc(var(--top-bar-right-margin) + var(--space-sm));
+        }
+        .searchFloating__1ac1c {
+            right: calc(var(--top-bar-right-margin) + var(--space-sm));
+        }
+        .balanceWidgetMenu__80679 {
+            margin-right: var(--top-bar-right-margin);
+        }
+        .inviteToolbar__133bf {
+            padding-right: 0;
+        }
+        .chat_f75fb0 > .layerContainer__59d0d {
+            z-index: 999;
+        }
+        .subtitleContainer_f75fb0 {
+            height: var(--custom-channel-header-height);
+        }
+        .title_f75fb0.container__9293f {
+            height: auto;
+            min-height: 0;
+        }
+    }
+    .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
+        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
+    }
+    .base__5e434:has(.winButtons_c38106) {
+        --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
+    }
+    .base__5e434:has(.trailing_c38106 > .button__85643) {
+        --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
+    }
+    .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) {
+        --top-bar-right-margin: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
+    }
+}
+
+@property --top-bar-title-position {
+    syntax: 'off | hide | left';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--top-bar-title-position: hide) {
+    .visual-refresh {
+        .title__85643 {
+            display: none;
+        }
+    }
+}
+
+@container body style(--top-bar-title-position: left) {
+    .visual-refresh {
+        .title_c38106 {
+            padding-left: var(--gap);
+            justify-content: flex-start;
+        }
+        .title__85643 {
+            gap: 4px;
+        }
+    }
+}
+
+@property --subtle-top-bar-title {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--subtle-top-bar-title: on) {
+    .visual-refresh {
+        .title__85643 .icon_f34534,
+        .title__85643 > svg {
+            display: none;
+        }
+        .title__85643 .text-sm\/medium_cf4812 {
+            line-height: 90%;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+    }
+}
