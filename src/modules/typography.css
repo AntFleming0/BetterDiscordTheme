@@ -44,14 +44,33 @@
     --letter-spacing-wide: 0.02em;
 }
 
+/* ===== DISCORD FONT VARIABLE OVERRIDES ===== */
+.theme-dark,
+.theme-light {
+    /* Override Discord's font variables */
+    --font-primary: Consolas, 'Courier New', 'Monaco', monospace;
+    --font-display: Consolas, 'Courier New', monospace;
+    --font-code: Consolas, 'Courier New', 'Source Code Pro', monospace;
+    --font-headline: Consolas, 'Courier New', monospace;
+}
+
 /* ===== APPLY FONTS TO DISCORD ===== */
 
 /* Main app font */
-body {
+body,
+#app-mount {
     font-family: var(--font-primary) !important;
     font-size: var(--font-size-base) !important;
     line-height: var(--line-height-base) !important;
     letter-spacing: var(--letter-spacing-normal) !important;
+}
+
+/* Apply to all Discord elements */
+div,
+span,
+p,
+label {
+    font-family: var(--font-primary) !important;
 }
 
 /* Headings */

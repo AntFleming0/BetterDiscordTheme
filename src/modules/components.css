@@ -1,479 +1,279 @@
 /**
  * @name Components Module
- * @description Discord UI component styling
+ * @description Discord UI component styling using stable CSS variables
  * @author AntFleming0
- * @version 1.0.0
+ * @version 2.0.0
  */
 
-/* ===== APP BACKGROUND ===== */
-.appMount-2yBXZl,
-.app-3xd6d0 {
-    background-color: var(--bg-darkest) !important;
+/* ===== DISCORD NATIVE CSS VARIABLE OVERRIDES ===== */
+/* These are Discord's actual CSS variables that control the UI */
+
+.theme-dark,
+.theme-light {
+    /* Background colors */
+    --background-primary: var(--bg-darkest);
+    --background-secondary: var(--bg-dark);
+    --background-secondary-alt: var(--bg-darker);
+    --background-tertiary: var(--bg-medium);
+    --background-accent: var(--accent-primary);
+    --background-floating: var(--bg-medium);
+    --background-mobile-primary: var(--bg-darkest);
+    --background-mobile-secondary: var(--bg-dark);
+    --background-modifier-hover: rgba(255, 255, 255, 0.04);
+    --background-modifier-active: rgba(255, 255, 255, 0.07);
+    --background-modifier-selected: rgba(130, 170, 255, 0.15);
+    --background-modifier-accent: rgba(130, 170, 255, 0.1);
+    
+    /* Text colors */
+    --text-normal: var(--text-primary);
+    --text-muted: var(--text-muted);
+    --text-link: var(--accent-secondary);
+    --text-positive: var(--success);
+    --text-warning: var(--warning);
+    --text-danger: var(--danger);
+    --text-brand: var(--accent-primary);
+    
+    /* Interactive elements */
+    --interactive-normal: var(--text-secondary);
+    --interactive-hover: var(--text-primary);
+    --interactive-active: var(--text-bright);
+    --interactive-muted: var(--text-dimmed);
+    
+    /* Channel colors */
+    --channels-default: var(--text-secondary);
+    --channel-icon: var(--text-muted);
+    --channel-text-area-placeholder: var(--text-muted);
+    
+    /* Header colors */
+    --header-primary: var(--text-bright);
+    --header-secondary: var(--text-secondary);
+    
+    /* Scrollbar */
+    --scrollbar-thin-thumb: var(--bg-lighter);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: var(--bg-lighter);
+    --scrollbar-auto-track: var(--bg-medium);
+    --scrollbar-auto-scrollbar-color-thumb: var(--bg-lighter);
+    --scrollbar-auto-scrollbar-color-track: var(--bg-medium);
+    
+    /* Elevation/shadows */
+    --elevation-stroke: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    --elevation-low: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --elevation-medium: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.5);
+    
+    /* Activity colors (game, spotify, etc) */
+    --activity-card-background: var(--bg-medium);
+    
+    /* Deprecated variables still in use */
+    --deprecated-card-bg: var(--bg-medium);
+    --deprecated-card-editable-bg: var(--bg-light);
+    --deprecated-store-bg: var(--bg-darkest);
+    --deprecated-quickswitcher-input-background: var(--bg-medium);
+    --deprecated-quickswitcher-input-placeholder: var(--text-muted);
+    --deprecated-text-input-bg: var(--bg-medium);
+    --deprecated-text-input-border: var(--border-default);
+    --deprecated-text-input-border-hover: var(--border-accent);
+    --deprecated-text-input-border-disabled: var(--border-subtle);
+    --deprecated-text-input-prefix: var(--text-muted);
 }
 
-/* Optional background image */
-.bg-1QIAus {
-    background: var(--custom-background-image, var(--bg-darkest)) !important;
-    background-size: cover !important;
-    background-position: center !important;
-    filter: blur(var(--custom-background-blur)) !important;
-    opacity: var(--custom-background-opacity) !important;
-}
-
-/* ===== SIDEBAR & NAVIGATION ===== */
-
-/* Server list */
-.wrapper-1_HaEi {
-    background-color: var(--bg-dark) !important;
-}
-
-.guilds-2JjMmN {
-    background-color: var(--bg-dark) !important;
-}
-
-/* Server icons */
-.wrapper-3kah-n {
-    background-color: var(--bg-medium) !important;
-    transition: background-color var(--transition-normal) !important;
-}
-
-.wrapper-3kah-n:hover {
-    background-color: var(--bg-light) !important;
-}
-
-/* Active server */
-.wrapper-3kah-n.selected-1sf9UK {
-    background-color: var(--accent-primary) !important;
-}
-
-/* Channel list sidebar */
-.sidebar-1tnWFu {
-    background-color: var(--bg-dark) !important;
-}
-
-/* Channel container */
-.container-1NXEtd {
-    background-color: var(--bg-dark) !important;
-}
-
-/* Channels */
-.channel-1Shao0,
-.channel-2QD9_O {
-    border-radius: var(--radius-sm) !important;
-    margin: 2px var(--spacing-sm) !important;
-    padding: var(--spacing-xs) var(--spacing-sm) !important;
-    transition: all var(--transition-normal) !important;
-}
-
-.channel-1Shao0:hover,
-.channel-2QD9_O:hover {
-    background-color: var(--bg-light) !important;
-}
-
-/* Selected channel */
-.channel-1Shao0.selected-3VkLtZ,
-.channel-2QD9_O.selected-3VkLtZ {
-    background-color: var(--bg-lighter) !important;
-    border-left: 2px solid var(--accent-primary) !important;
-}
-
-/* Channel names */
-.name-28HaxV {
-    color: var(--text-secondary) !important;
-}
-
-.channel-1Shao0:hover .name-28HaxV,
-.channel-2QD9_O:hover .name-28HaxV {
-    color: var(--text-primary) !important;
-}
-
-.selected-3VkLtZ .name-28HaxV {
-    color: var(--text-bright) !important;
-}
-
-/* Unread channels */
-.unread-36eUEm {
-    background-color: var(--accent-primary) !important;
-}
-
-/* ===== CHAT AREA ===== */
-
-/* Main chat container */
-.chat-2ZfjoI {
-    background-color: var(--bg-darkest) !important;
-}
-
-/* Messages */
-.message-2CShn3 {
-    background-color: transparent !important;
-    border-radius: var(--radius-sm) !important;
-    padding: var(--spacing-xs) var(--spacing-lg) !important;
-    transition: background-color var(--transition-fast) !important;
-}
-
-.message-2CShn3:hover {
-    background-color: rgba(255, 255, 255, 0.03) !important;
-}
-
-/* Message author */
-.username-h_Y3Us {
-    color: var(--text-primary) !important;
-    font-weight: var(--font-weight-semibold) !important;
-}
-
-/* Message content */
-.messageContent-2t3eCI {
-    color: var(--text-primary) !important;
-}
-
-/* Timestamps */
-.timestamp-p1Df1m {
-    color: var(--text-muted) !important;
-    font-size: var(--font-size-xs) !important;
-}
-
-/* ===== MESSAGE INPUT ===== */
-
-/* Chat input container */
-.channelTextArea-1FufC0 {
-    background-color: var(--bg-medium) !important;
-    border-radius: var(--radius-md) !important;
-    margin: var(--spacing-md) var(--spacing-lg) !important;
-}
-
-/* Text input */
-.textArea-2CLwUE {
-    background-color: transparent !important;
-    color: var(--text-primary) !important;
-    font-family: var(--font-primary) !important;
-}
-
-.textArea-2CLwUE::placeholder {
-    color: var(--text-muted) !important;
-}
-
-/* ===== CODE BLOCKS ===== */
-
-/* Inline code */
-code.inline {
-    background-color: var(--bg-medium) !important;
-    border: 1px solid var(--border-subtle) !important;
-    border-radius: var(--radius-sm) !important;
-    padding: 2px var(--spacing-xs) !important;
-    color: var(--color-string) !important;
-    font-family: var(--font-code) !important;
-    font-size: var(--font-size-sm) !important;
-}
+/* ===== ADDITIONAL STYLING ===== */
 
 /* Code blocks */
-.codeContainer-B3dBUa,
+code {
+    background-color: var(--bg-medium) !important;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 2px 4px;
+    color: var(--color-string) !important;
+    font-family: var(--font-code) !important;
+}
+
 pre {
     background-color: var(--bg-dark) !important;
-    border: 1px solid var(--border-default) !important;
-    border-radius: var(--radius-md) !important;
-    padding: var(--spacing-md) !important;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    padding: 12px;
 }
 
 pre code {
     background-color: transparent !important;
     border: none !important;
-    color: var(--text-primary) !important;
-    font-family: var(--font-code) !important;
+    padding: 0;
 }
 
-/* ===== EMBEDS ===== */
-
-.embedFull-1HGV2S {
-    background-color: var(--bg-medium) !important;
-    border-left: 4px solid var(--accent-primary) !important;
-    border-radius: var(--radius-md) !important;
-    padding: var(--spacing-md) !important;
-}
-
-.embedAuthor-36QHzH {
-    color: var(--text-primary) !important;
-}
-
-.embedTitle-2n1pEb {
-    color: var(--accent-secondary) !important;
-}
-
-.embedDescription-1ColtV {
-    color: var(--text-secondary) !important;
-}
-
-/* ===== BUTTONS ===== */
-
-.button-f2h6uQ {
-    background-color: var(--bg-medium) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--border-default) !important;
-    border-radius: var(--radius-sm) !important;
-    padding: var(--spacing-sm) var(--spacing-lg) !important;
+/* Buttons */
+button {
     font-family: var(--font-primary) !important;
-    font-weight: var(--font-weight-medium) !important;
-    transition: all var(--transition-normal) !important;
-}
-
-.button-f2h6uQ:hover {
-    background-color: var(--bg-light) !important;
-    border-color: var(--border-accent) !important;
-}
-
-.button-f2h6uQ:active {
-    background-color: var(--bg-lighter) !important;
-}
-
-/* Primary button */
-.lookFilled-1H2Jvj.colorBrand-2M3O3N {
-    background-color: var(--accent-primary) !important;
-    color: var(--bg-darkest) !important;
-    border-color: var(--accent-primary) !important;
-}
-
-.lookFilled-1H2Jvj.colorBrand-2M3O3N:hover {
-    background-color: var(--accent-primary-hover) !important;
-}
-
-/* Danger button */
-.lookFilled-1H2Jvj.colorRed-rQXKgM {
-    background-color: var(--danger) !important;
-    color: var(--bg-darkest) !important;
-}
-
-/* Success button */
-.lookFilled-1H2Jvj.colorGreen-3y-Z79 {
-    background-color: var(--success) !important;
-    color: var(--bg-darkest) !important;
-}
-
-/* ===== INPUTS & FORMS ===== */
-
-input,
-textarea {
-    background-color: var(--bg-medium) !important;
-    border: 1px solid var(--border-default) !important;
     border-radius: var(--radius-sm) !important;
-    color: var(--text-primary) !important;
-    padding: var(--spacing-sm) !important;
-    transition: all var(--transition-normal) !important;
+    transition: all 0.2s ease !important;
 }
 
-input:focus,
-textarea:focus {
-    border-color: var(--accent-primary) !important;
-    box-shadow: var(--focus-glow) !important;
-    outline: none !important;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: var(--text-muted) !important;
-}
-
-/* ===== MODALS ===== */
-
-.modal-3Hrb0S,
-.root-g14mjS {
-    background-color: var(--bg-darker) !important;
-    box-shadow: var(--shadow-xl) !important;
-    border-radius: var(--radius-lg) !important;
-}
-
-.header-3xB4vB {
-    background-color: var(--bg-dark) !important;
-    border-bottom: 1px solid var(--border-default) !important;
-}
-
-.content-2hZxGK {
-    background-color: var(--bg-darker) !important;
-}
-
-.footer-31IekZ {
-    background-color: var(--bg-dark) !important;
-    border-top: 1px solid var(--border-default) !important;
-}
-
-/* ===== POPOUTS ===== */
-
-.menu-1QYou5,
-.submenu-1apzyU {
-    background-color: var(--bg-medium) !important;
-    border: 1px solid var(--border-default) !important;
+/* Channel text area */
+[class*="channelTextArea"] {
     border-radius: var(--radius-md) !important;
-    box-shadow: var(--shadow-lg) !important;
 }
 
-.item-1OdjEX {
-    color: var(--text-primary) !important;
-    transition: all var(--transition-fast) !important;
+/* Search bar styling */
+[class*="search"] [class*="searchBar"] {
+    background-color: var(--bg-medium) !important;
+    border-radius: var(--radius-sm) !important;
 }
 
-.item-1OdjEX:hover {
-    background-color: var(--accent-primary) !important;
-    color: var(--bg-darkest) !important;
-}
-
-/* ===== USER PANEL (BOTTOM) ===== */
-
-.container-YkUktl {
-    background-color: var(--bg-dark) !important;
-    border-top: 1px solid var(--border-default) !important;
-}
-
-/* ===== STATUS INDICATORS ===== */
-
-.status-1dSWLn {
-    border: 2px solid var(--bg-dark) !important;
-}
-
-/* Online */
-.status-1dSWLn[style*="background-color: rgb(35, 165, 90)"],
-.status-1dSWLn.online {
-    background-color: var(--status-online) !important;
-}
-
-/* Idle */
-.status-1dSWLn[style*="background-color: rgb(240, 178, 50)"],
-.status-1dSWLn.idle {
-    background-color: var(--status-idle) !important;
-}
-
-/* Do Not Disturb */
-.status-1dSWLn[style*="background-color: rgb(237, 66, 69)"],
-.status-1dSWLn.dnd {
-    background-color: var(--status-dnd) !important;
-}
-
-/* Offline */
-.status-1dSWLn[style*="background-color: rgb(116, 127, 141)"],
-.status-1dSWLn.offline {
-    background-color: var(--status-offline) !important;
-}
-
-/* Streaming */
-.status-1dSWLn.streaming {
-    background-color: var(--status-streaming) !important;
-}
-
-/* ===== MENTIONS ===== */
-
-.mention {
+/* Mentions */
+[class*="mention"] {
     background-color: var(--mention-bg) !important;
     color: var(--accent-primary) !important;
-    border-radius: var(--radius-sm) !important;
-    padding: 2px var(--spacing-xs) !important;
-    transition: all var(--transition-fast) !important;
+    border-radius: var(--radius-sm);
+    padding: 0 4px;
 }
 
-.mention:hover {
+[class*="mention"]:hover {
     background-color: var(--mention-hover-bg) !important;
     color: var(--accent-primary-hover) !important;
 }
 
-/* ===== REACTIONS ===== */
-
-.reaction-3vwAF2 {
+/* User popout */
+[class*="userPopout"] {
     background-color: var(--bg-medium) !important;
-    border: 1px solid var(--border-subtle) !important;
-    border-radius: var(--radius-md) !important;
-    transition: all var(--transition-normal) !important;
+    border: 1px solid var(--border-default);
+    box-shadow: var(--shadow-lg);
 }
 
-.reaction-3vwAF2:hover {
+/* Modals */
+[class*="modal"] [class*="root"] {
+    background-color: var(--bg-darker) !important;
+    box-shadow: var(--shadow-xl);
+    border-radius: var(--radius-lg);
+}
+
+[class*="modal"] [class*="header"] {
+    background-color: var(--bg-dark) !important;
+    border-bottom: 1px solid var(--border-default);
+}
+
+[class*="modal"] [class*="footer"] {
+    background-color: var(--bg-dark) !important;
+    border-top: 1px solid var(--border-default);
+}
+
+/* Context menus */
+[class*="menu"] {
+    background-color: var(--bg-medium) !important;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+[class*="menu"] [class*="item"]:hover {
+    background-color: var(--accent-primary) !important;
+    color: var(--bg-darkest) !important;
+}
+
+/* Embeds */
+[class*="embed"] {
+    background-color: var(--bg-medium) !important;
+    border-left: 4px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+}
+
+/* Reactions */
+[class*="reaction"] {
+    background-color: var(--bg-medium) !important;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+
+[class*="reaction"]:hover {
     background-color: var(--bg-light) !important;
-    border-color: var(--accent-primary) !important;
+    border-color: var(--accent-primary);
 }
 
-.reaction-3vwAF2.reactionMe-1PwQAc {
+[class*="reactionMe"] {
     background-color: rgba(130, 170, 255, 0.15) !important;
     border-color: var(--accent-primary) !important;
 }
 
-/* ===== TOOLTIPS ===== */
-
-.tooltip-14MtrL {
-    background-color: var(--bg-darker) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--border-default) !important;
-    border-radius: var(--radius-sm) !important;
-    box-shadow: var(--shadow-md) !important;
-    font-family: var(--font-primary) !important;
-    font-size: var(--font-size-sm) !important;
-}
-
-/* ===== SEARCH BAR ===== */
-
-.searchBar-jGtisZ {
-    background-color: var(--bg-medium) !important;
-    border-radius: var(--radius-sm) !important;
-}
-
-.searchBar-jGtisZ:focus-within {
-    box-shadow: var(--focus-glow) !important;
-}
-
-/* ===== MEMBER LIST ===== */
-
-.members-3WRCEx {
-    background-color: var(--bg-dark) !important;
-}
-
-.member-48YF_l {
-    border-radius: var(--radius-sm) !important;
-    margin: 2px var(--spacing-sm) !important;
-    padding: var(--spacing-xs) var(--spacing-sm) !important;
-    transition: background-color var(--transition-normal) !important;
-}
-
-.member-48YF_l:hover {
-    background-color: var(--bg-light) !important;
-}
-
-/* ===== VOICE CHANNEL UI ===== */
-
-.container-1NXEtd {
-    background-color: var(--bg-dark) !important;
-}
-
-.wrapper-1gVUIN {
-    background-color: var(--bg-medium) !important;
-    border-radius: var(--radius-md) !important;
-}
-
-/* ===== NOTICES & BANNERS ===== */
-
-.notice-12Koq- {
-    background-color: var(--bg-medium) !important;
-    border-radius: var(--radius-md) !important;
-}
-
-/* ===== DIVIDERS ===== */
-
-.divider-2rZoKz {
-    border-color: var(--border-default) !important;
-}
-
-/* ===== SETTINGS ===== */
-
-.contentRegion-3HkfJJ {
-    background-color: var(--bg-darkest) !important;
-}
-
-.sidebarRegion-1VBisG {
-    background-color: var(--bg-dark) !important;
-}
-
-.item-3mHhwr {
+/* Typing indicator */
+[class*="typing"] {
     color: var(--text-secondary) !important;
 }
 
-.item-3mHhwr:hover {
+/* User panel (bottom) */
+[class*="panels"] {
+    background-color: var(--bg-dark) !important;
+    border-top: 1px solid var(--border-default);
+}
+
+/* Voice controls */
+[class*="container"] [class*="avatarSpeaking"] {
+    box-shadow: inset 0 0 0 2px var(--success), inset 0 0 0 3px var(--bg-dark);
+}
+
+/* Unread badge */
+[class*="numberBadge"] {
+    background-color: var(--danger) !important;
+}
+
+[class*="mentionsBadge"] {
+    background-color: var(--danger) !important;
+}
+
+/* Guild (server) separator */
+[class*="guildSeparator"] {
+    background-color: var(--border-default);
+}
+
+/* Settings */
+[class*="contentRegion"],
+[class*="contentRegionScroller"] {
+    background-color: var(--bg-darkest) !important;
+}
+
+[class*="sidebarRegion"],
+[class*="sidebarRegionScroller"] {
+    background-color: var(--bg-dark) !important;
+}
+
+[class*="side"] [class*="item"]:hover {
     background-color: var(--bg-light) !important;
+}
+
+[class*="side"] [class*="item"][class*="selected"] {
+    background-color: var(--bg-lighter) !important;
+    color: var(--text-bright) !important;
+}
+
+/* Dividers */
+[class*="divider"] {
+    border-color: var(--border-default) !important;
+}
+
+/* Notices */
+[class*="notice"] {
+    background-color: var(--info) !important;
+    color: var(--bg-darkest) !important;
+}
+
+/* Tooltips */
+[class*="tooltip"] {
+    background-color: var(--bg-darker) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-default);
+    box-shadow: var(--shadow-md);
+}
+
+/* Status picker */
+[class*="statusItem"] {
     color: var(--text-primary) !important;
 }
 
-.item-3mHhwr.selected-g-kMVV {
-    background-color: var(--bg-lighter) !important;
-    color: var(--text-bright) !important;
+[class*="statusItem"]:hover {
+    background-color: var(--bg-light) !important;
+}
+
+/* Profile badges */
+[class*="profileBadge"] {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
