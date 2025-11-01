@@ -5,25 +5,25 @@
 }
 
 :root {
-    /* VSCode Palenight (mild contrast) color scheme */
+    /* VSCode Palenight (Mild Contrast) color scheme - exact values */
     
-    /* text colors - based on Palenight text colors */
+    /* text colors - based on VSCode Palenight Mild Contrast */
     --text-0: hsl(230, 19%, 13%); /* text on colored elements - darker background */
-    --text-1: hsl(229, 25%, 93%); /* other normally white text - main foreground */
-    --text-2: hsl(224, 18%, 79%); /* headings and important text */
-    --text-3: hsl(229, 15%, 68%); /* normal text - comments/subtle */
-    --text-4: hsl(229, 13%, 52%); /* icon buttons and channels */
-    --text-5: hsl(230, 10%, 38%); /* muted channels/chats and timestamps */
+    --text-1: hsl(0, 0%, 87%); /* #DCDFE4 - main foreground text */
+    --text-2: hsl(229, 20%, 75%); /* #BFC7D5 - headings and important text */
+    --text-3: hsl(229, 15%, 68%); /* #A6ACCD - normal text */
+    --text-4: hsl(229, 14%, 50%); /* #697098 - icon buttons, muted text */
+    --text-5: hsl(230, 12%, 40%); /* #525B7E - very muted text, timestamps */
 
-    /* background and dark colors - Palenight backgrounds */
-    --bg-1: hsl(230, 19%, 20%); /* dark buttons when clicked */
-    --bg-2: hsl(230, 19%, 16%); /* dark buttons - slightly lighter panel */
-    --bg-3: hsl(230, 19%, 15%); /* spacing, secondary elements - sidebar */
-    --bg-4: hsl(230, 19%, 13%); /* main background color - editor background */
-    --hover: hsla(229, 31%, 55%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(229, 31%, 55%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(229, 31%, 55%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(230, 19%, 0%, 0.15); /* messages when hovered */
+    /* background and dark colors - VSCode Palenight Mild Contrast backgrounds */
+    --bg-1: hsl(230, 19%, 24%); /* #353948 - lighter panels, buttons when clicked */
+    --bg-2: hsl(230, 21%, 19%); /* #272935 - dark buttons, elevated surfaces */
+    --bg-3: hsl(230, 21%, 16%); /* #232530 - sidebar, secondary panels */
+    --bg-4: hsl(230, 19%, 13%); /* #1E2030 - main editor/background color */
+    --hover: hsla(261, 100%, 80%, 0.08); /* purple tint for hovers */
+    --active: hsla(261, 100%, 80%, 0.15); /* purple tint for active states */
+    --active-2: hsla(261, 100%, 80%, 0.22); /* extra state for transparent buttons */
+    --message-hover: hsla(230, 21%, 100%, 0.03); /* subtle messages hover */
 
     /* accent colors - Palenight uses purple/blue accents */
     --accent-1: var(--palenight-blue); /* links and other accent text */
@@ -49,22 +49,22 @@
     --border: hsl(230, 20%, 30%, 0.2); /* normal border color */
     --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
 
-    /* Palenight base colors - authentic VSCode Palenight palette */
-    --palenight-red: hsl(5, 74%, 67%); /* #F07178 - errors, deletions */
-    --palenight-red-dark: hsl(5, 74%, 60%);
-    --palenight-red-light: hsl(5, 74%, 74%);
+    /* Palenight base colors - authentic VSCode Palenight (Mild Contrast) palette */
+    --palenight-red: hsl(3, 69%, 67%); /* #E07178 - errors, deletions */
+    --palenight-red-dark: hsl(3, 69%, 60%);
+    --palenight-red-light: hsl(3, 69%, 74%);
     
     --palenight-orange: hsl(13, 93%, 66%); /* #F78C6C - constants, numbers */
     --palenight-orange-dark: hsl(13, 93%, 60%);
     --palenight-orange-light: hsl(13, 93%, 72%);
     
-    --palenight-yellow: hsl(39, 100%, 71%); /* #FFCB6B - functions, warnings */
-    --palenight-yellow-dark: hsl(39, 100%, 64%);
-    --palenight-yellow-light: hsl(39, 100%, 78%);
+    --palenight-yellow: hsl(39, 96%, 66%); /* #FFCB6B - functions, warnings */
+    --palenight-yellow-dark: hsl(39, 96%, 60%);
+    --palenight-yellow-light: hsl(39, 96%, 73%);
     
     --palenight-green: hsl(95, 38%, 62%); /* #C3E88D - strings, added lines */
-    --palenight-green-dark: hsl(95, 38%, 55%);
-    --palenight-green-light: hsl(95, 38%, 69%);
+    --palenight-green-dark: hsl(95, 38%, 56%);
+    --palenight-green-light: hsl(95, 38%, 68%);
     
     --palenight-cyan: hsl(191, 97%, 77%); /* #89DDFF - operators, special keywords */
     --palenight-cyan-dark: hsl(191, 97%, 70%);
@@ -74,13 +74,13 @@
     --palenight-blue-dark: hsl(207, 82%, 60%);
     --palenight-blue-light: hsl(207, 82%, 72%);
     
-    --palenight-purple: hsl(261, 100%, 80%); /* #C792EA - keywords, tags */
-    --palenight-purple-dark: hsl(261, 100%, 74%);
-    --palenight-purple-light: hsl(261, 100%, 86%);
+    --palenight-purple: hsl(261, 51%, 71%); /* #C792EA - keywords, tags */
+    --palenight-purple-dark: hsl(261, 51%, 65%);
+    --palenight-purple-light: hsl(261, 51%, 77%);
     
-    --palenight-pink: hsl(324, 100%, 77%); /* #FF9CAC - special */
-    --palenight-pink-dark: hsl(324, 100%, 70%);
-    --palenight-pink-light: hsl(324, 100%, 84%);
+    --palenight-pink: hsl(331, 73%, 69%); /* #F07178 variant - special */
+    --palenight-pink-dark: hsl(331, 73%, 63%);
+    --palenight-pink-light: hsl(331, 73%, 75%);
 }
 
 @container root style(--colors: on) {

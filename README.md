@@ -47,8 +47,9 @@ The theme uses the authentic VSCode Palenight color scheme:
 3. Click "Open Theme Folder"
 4. Create a new file called `palenight.theme.css`
 5. Paste this import line:
+
 ```css
-@import url('https://AntFleming0.github.io/BetterDiscordTheme/themes/palenight.theme.css');
+@import url("https://AntFleming0.github.io/BetterDiscordTheme/themes/palenight.theme.css");
 ```
 
 ## ⚙️ Customization
@@ -56,34 +57,40 @@ The theme uses the authentic VSCode Palenight color scheme:
 You can customize the theme by editing the variables in the theme file. Here are some common customizations:
 
 ### Change Font
+
 ```css
---font: 'Your Font Name';
---code-font: 'Your Code Font';
+--font: "Your Font Name";
+--code-font: "Your Code Font";
 ```
 
 ### Adjust Panel Spacing
+
 ```css
 --gap: 16px; /* default is 12px */
 ```
 
 ### Enable Background Blur
+
 ```css
 --panel-blur: on;
 --blur-amount: 16px;
 ```
 
 ### Change Chatbar Style
+
 ```css
 --custom-chatbar: separated; /* options: off, aligned, separated */
 ```
 
 ### Add Custom Background Image
+
 ```css
 --background-image: on;
---background-image-url: url('your-image-url-here');
+--background-image-url: url("your-image-url-here");
 ```
 
 ### Disable Animations
+
 ```css
 --animations: off;
 ```
@@ -139,6 +146,7 @@ If you encounter any issues or have suggestions for improvements, please [open a
 ## 🌟 Support
 
 If you like this theme, please consider:
+
 - ⭐ Starring the repository
 - 🐛 Reporting bugs
 - 💡 Suggesting new features

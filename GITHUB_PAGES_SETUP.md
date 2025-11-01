@@ -21,6 +21,7 @@
 ### 3. Verify Your Theme URL
 
 Once deployed, your theme files will be accessible at:
+
 - Main theme: `https://AntFleming0.github.io/BetterDiscordTheme/themes/palenight.theme.css`
 - Build CSS: `https://AntFleming0.github.io/BetterDiscordTheme/build/palenight.css`
 
@@ -50,6 +51,7 @@ GitHub Pages will automatically update within 1-3 minutes!
 ## File Structure for GitHub Pages
 
 Make sure these files are in your repository:
+
 ```
 /build/palenight.css          ← Built CSS file (combined sources)
 /themes/palenight.theme.css   ← Main theme file with metadata
@@ -60,12 +62,14 @@ README.md                      ← Documentation
 ## Troubleshooting
 
 ### Theme not loading?
+
 1. Check that GitHub Pages is enabled in Settings
 2. Verify the deployment was successful in the Actions tab
 3. Make sure the file paths in your theme match the repository structure
 4. Clear Discord's cache (Ctrl+Shift+I → Application → Clear Storage)
 
 ### Making updates?
+
 1. Edit files in `/src/` directory
 2. Rebuild `/build/palenight.css` by concatenating source files
 3. Commit and push to GitHub
@@ -75,6 +79,7 @@ README.md                      ← Documentation
 ## Custom Domain (Optional)
 
 If you want to use a custom domain:
+
 1. Add a `CNAME` file to your repository root with your domain name
 2. Configure DNS settings with your domain provider
 3. Update theme URLs in `palenight.theme.css` to use your custom domain

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-
 :root {
     container-name: root;
     --custom-guild-list-padding: 12px;
@@ -11,9 +9,9 @@
 body {
     container-name: body;
 
-    /* font, uses Fira Code like VSCode - change to '' for default discord font */
-    --font: 'Fira Code';
-    --code-font: 'Fira Code';
+    /* font, uses Consolas like VSCode - change to '' for default discord font */
+    --font: 'Consolas', 'Courier New', monospace;
+    --code-font: 'Consolas', 'Courier New', monospace;
 
     /* sizes */
     --gap: 12px; /* spacing between panels */

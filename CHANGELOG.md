@@ -5,6 +5,7 @@ All notable changes to the VSCode Palenight BetterDiscord theme will be document
 ## [1.0.0] - 2024-11-01
 
 ### Added
+
 - Initial release of VSCode Palenight theme for BetterDiscord
 - Authentic VSCode Palenight (mild contrast) color palette
 - Fira Code font integration
@@ -23,6 +24,7 @@ All notable changes to the VSCode Palenight BetterDiscord theme will be document
 - Source files for customization
 
 ### Color Palette
+
 - Purple (`#C792EA`) - Primary accent, keywords
 - Blue (`#82AAFF`) - Links, variables
 - Cyan (`#89DDFF`) - Operators
@@ -33,6 +35,7 @@ All notable changes to the VSCode Palenight BetterDiscord theme will be document
 - Pink (`#FF9CAC`) - Special elements
 
 ### Files Included
+
 - `/src/main.css` - Core layout and structure
 - `/src/colors.css` - Complete Palenight color scheme with 600+ Discord variable mappings
 - `/src/animations.css` - Smooth hover effects and transitions
@@ -47,6 +50,7 @@ All notable changes to the VSCode Palenight BetterDiscord theme will be document
 - `/themes/palenight.theme.css` - Main theme file with metadata
 
 ### Documentation
+
 - Detailed README.md with features, installation, and customization
 - GitHub Pages setup guide
 - Project structure documentation
@@ -57,6 +61,7 @@ All notable changes to the VSCode Palenight BetterDiscord theme will be document
 ## Future Plans
 
 ### Potential Features for v1.1.0
+
 - [ ] Alternative color variants (High Contrast, Darker version)
 - [ ] Custom emoji/reaction styles
 - [ ] Enhanced code block styling
@@ -67,6 +72,7 @@ All notable changes to the VSCode Palenight BetterDiscord theme will be document
 - [ ] Video setup tutorial
 
 ### Community Requests
+
 Feature requests from the community will be tracked here.
 
 ---
