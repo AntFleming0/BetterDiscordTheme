@@ -562,14 +562,21 @@ body {
 .theme-dark,
 .theme-light,
 body {
-    --background-primary: #292D3E !important;
-    --background-secondary: #25293A !important;
-    --background-secondary-alt: #25293A !important;
-    --background-tertiary: #31364a !important;
+    --background-primary: #292D3E !important; /* Main chat area - editor background */
+    --background-secondary: #25293A !important; /* Server list, channel list - sidebar */
+    --background-secondary-alt: #25293A !important; /* Friends list sidebar */
+    --background-tertiary: #25293A !important; /* Server channels, members list - darker sidebar color */
     --background-accent: #31364a !important;
     --background-floating: #25293A !important;
     --background-mobile-primary: #292D3E !important;
     --background-mobile-secondary: #25293A !important;
+    
+    /* Activity panel (bottom left) and input areas */
+    --bg-backdrop: #25293A !important;
+    --bg-backdrop-no-opacity: #25293A !important;
+    --channeltextarea-background: #25293A !important; /* Chat input box */
+    --activity-card-background: #25293A !important; /* Activity status panel */
+    --profile-body-background-color: #25293A !important;
 }
 
 @container root style(--colors: on) {
