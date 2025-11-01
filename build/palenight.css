@@ -558,6 +558,20 @@ body {
     --palenight-pink-light: hsl(331, 73%, 75%);
 }
 
+/* Force VSCode Palenight colors directly on Discord elements - bypassing container query */
+.theme-dark,
+.theme-light,
+body {
+    --background-primary: #292D3E !important;
+    --background-secondary: #25293A !important;
+    --background-secondary-alt: #25293A !important;
+    --background-tertiary: #31364a !important;
+    --background-accent: #31364a !important;
+    --background-floating: #25293A !important;
+    --background-mobile-primary: #292D3E !important;
+    --background-mobile-secondary: #25293A !important;
+}
+
 @container root style(--colors: on) {
     .visual-refresh body,
     .visual-refresh .theme-dark:not(.custom-user-profile-theme),
