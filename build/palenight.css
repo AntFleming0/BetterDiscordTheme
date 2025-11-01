@@ -562,21 +562,48 @@ body {
 .theme-dark,
 .theme-light,
 body {
+    /* Main backgrounds - matching VSCode layout */
     --background-primary: #292D3E !important; /* Main chat area - editor background */
-    --background-secondary: #25293A !important; /* Server list, channel list - sidebar */
-    --background-secondary-alt: #25293A !important; /* Friends list sidebar */
-    --background-tertiary: #25293A !important; /* Server channels, members list - darker sidebar color */
+    --background-secondary: #25293A !important; /* Server list - sidebar */
+    --background-secondary-alt: #25293A !important; /* Friends list */
+    --background-tertiary: #25293A !important; /* Server channels, members list */
     --background-accent: #31364a !important;
     --background-floating: #25293A !important;
     --background-mobile-primary: #292D3E !important;
     --background-mobile-secondary: #25293A !important;
+    --background-modifier-accent: rgba(126, 87, 194, 0.3) !important;
     
-    /* Activity panel (bottom left) and input areas */
+    /* Chat input and activity areas - custom variables */
+    --background-base-lower: #25293A !important; /* Chat input box background */
+    --chat-background-default: #25293A !important; /* Chat input area */
     --bg-backdrop: #25293A !important;
     --bg-backdrop-no-opacity: #25293A !important;
-    --channeltextarea-background: #25293A !important; /* Chat input box */
+    --channeltextarea-background: #25293A !important;
     --activity-card-background: #25293A !important; /* Activity status panel */
     --profile-body-background-color: #25293A !important;
+    
+    /* Additional background variables to override */
+    --bg-overlay-1: #25293A !important;
+    --bg-overlay-2: #25293A !important;
+    --bg-overlay-3: #25293A !important;
+}
+
+/* Direct element targeting to ensure correct colors */
+.chatContent_f75fb0,
+.chat_f75fb0 {
+    background-color: #292D3E !important; /* Lighter color for main chat area */
+}
+
+.channelTextArea_f75fb0,
+.form_f75fb0,
+.messagesWrapper__36d07 {
+    background-color: #25293A !important; /* Darker color for input areas */
+}
+
+.panels__5e434,
+.container__11d72,
+.activityPanel__0b6c8 {
+    background-color: #25293A !important; /* Activity panel at bottom */
 }
 
 @container root style(--colors: on) {
