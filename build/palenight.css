@@ -1297,10 +1297,21 @@ body {
 
 /* Status Indicator Colors - Palenight Theme with Shape Changes */
 
+/* Target all status SVG containers including pointerEvents class */
+[class*="pointerEvents"] svg rect,
+svg[class*="status"] rect,
+foreignObject rect {
+    rx: 3 !important; /* Rounded square shape */
+    ry: 3 !important;
+}
+
 /* Offline Status - Gray */
 rect[fill='#82838b'],
 rect[fill='rgb(128, 131, 139)'],
-rect[fill='rgb(128, 132, 142)'] {
+rect[fill='rgb(128, 132, 142)'],
+[class*="pointerEvents"] rect[fill='#82838b'],
+[class*="pointerEvents"] rect[fill='rgb(128, 131, 139)'],
+[class*="pointerEvents"] rect[fill='rgb(128, 132, 142)'] {
     fill: var(--offline) !important;
     rx: 3 !important; /* Rounded square shape */
     ry: 3 !important;
@@ -1315,6 +1326,9 @@ rect[fill='rgb(128, 132, 142)'] {
 rect[fill='#43a25a'],
 rect[fill='rgb(67, 162, 90)'],
 rect[fill='rgb(59, 165, 92)'],
+[class*="pointerEvents"] rect[fill='#43a25a'],
+[class*="pointerEvents"] rect[fill='rgb(67, 162, 90)'],
+[class*="pointerEvents"] rect[fill='rgb(59, 165, 92)'],
 path[fill='#43a25a'],
 path[fill='var(--status-positive)'] {
     fill: var(--online) !important;
@@ -1331,7 +1345,11 @@ path[fill='var(--status-positive)'] {
 rect[fill='#ca9654'],
 rect[fill='#f0b232'],
 rect[fill='rgb(202, 150, 84)'],
-rect[fill='rgb(240, 178, 50)'] {
+rect[fill='rgb(240, 178, 50)'],
+[class*="pointerEvents"] rect[fill='#ca9654'],
+[class*="pointerEvents"] rect[fill='#f0b232'],
+[class*="pointerEvents"] rect[fill='rgb(202, 150, 84)'],
+[class*="pointerEvents"] rect[fill='rgb(240, 178, 50)'] {
     fill: var(--idle) !important;
     rx: 3 !important;
     ry: 3 !important;
@@ -1346,7 +1364,11 @@ rect[fill='rgb(240, 178, 50)'] {
 rect[fill='#d83a42'],
 rect[fill='#f23f42'],
 rect[fill='rgb(216, 58, 66)'],
-rect[fill='rgb(242, 63, 66)'] {
+rect[fill='rgb(242, 63, 66)'],
+[class*="pointerEvents"] rect[fill='#d83a42'],
+[class*="pointerEvents"] rect[fill='#f23f42'],
+[class*="pointerEvents"] rect[fill='rgb(216, 58, 66)'],
+[class*="pointerEvents"] rect[fill='rgb(242, 63, 66)'] {
     fill: var(--dnd) !important;
     rx: 3 !important;
     ry: 3 !important;
@@ -1359,7 +1381,9 @@ rect[fill='rgb(242, 63, 66)'] {
 
 /* Streaming Status - Purple */
 rect[fill='#9147ff'],
-rect[fill='rgb(145, 71, 255)'] {
+rect[fill='rgb(145, 71, 255)'],
+[class*="pointerEvents"] rect[fill='#9147ff'],
+[class*="pointerEvents"] rect[fill='rgb(145, 71, 255)'] {
     fill: var(--streaming) !important;
     rx: 3 !important;
     ry: 3 !important;
@@ -1380,15 +1404,18 @@ div[style*='background-color: rgb(67, 162, 90)'] {
 [class*="splash"],
 .loadingPopout_aa8da2,
 .loadingPopout__0ba2a,
-[class*="loadingPopout"] {
+[class*="loadingPopout"],
+#app-mount > div[class*="app-"] > div[class*="splash"] {
     background: var(--bg-4) !important;
 }
 
-/* Hide default Discord loading graphics and text */
+/* Hide default Discord loading graphics and text completely */
 .splash_b41f97 > *,
-[class*="splash"] > * {
+[class*="splash"] > *,
+#app-mount > div[class*="app-"] > div[class*="splash"] > * {
     opacity: 0 !important;
     visibility: hidden !important;
+    display: none !important;
 }
 
 /* Ensure our custom spinner is visible */
@@ -1396,7 +1423,8 @@ div[style*='background-color: rgb(67, 162, 90)'] {
 [class*="splash"]::after,
 .loadingPopout_aa8da2::after,
 .loadingPopout__0ba2a::after,
-[class*="loadingPopout"]::after {
+[class*="loadingPopout"]::after,
+#app-mount > div[class*="app-"] > div[class*="splash"]::after {
     content: '' !important;
     position: absolute !important;
     top: 50% !important;
@@ -1413,6 +1441,7 @@ div[style*='background-color: rgb(67, 162, 90)'] {
     z-index: 99999 !important;
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
 }
 
 @keyframes palenight-loading-spin {
