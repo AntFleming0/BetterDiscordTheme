@@ -694,6 +694,39 @@ body {
         background: var(--bg-3) !important;
     }
 
+    /* Active Now - Activity cards and content */
+    .itemCard__3f24e,
+    .activity__46207,
+    [class*="itemCard"],
+    [class*="activity"] {
+        background: var(--bg-2) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: var(--radius-md) !important;
+    }
+
+    /* Active Now - Text styling */
+    .itemCard__3f24e .title__48d42,
+    .itemCard__3f24e .subtitle__8c7cd,
+    .activity__46207 .activityName__5d60b,
+    [class*="itemCard"] [class*="title"],
+    [class*="activity"] [class*="name"] {
+        color: var(--text-0) !important;
+    }
+
+    /* Active Now - Secondary text */
+    .itemCard__3f24e .details__56434,
+    [class*="itemCard"] [class*="details"],
+    [class*="activity"] [class*="details"] {
+        color: var(--text-1) !important;
+    }
+
+    /* Active Now - Section header */
+    .section__7e80f,
+    [class*="section"] h2,
+    .nowPlayingColumn__133bf h2 {
+        color: var(--text-0) !important;
+    }
+
     .homeWrapper__0920e /* nitro page group inner */ {
         border: none;
         background: none;
@@ -999,12 +1032,23 @@ body {
 /* STATUS INDICATORS - Midnight Pattern         */
 /* ============================================= */
 
+/* Change all status indicators to rounded squares */
+svg rect[mask*='status'],
+foreignObject rect,
+rect[width='10'][height='10'],
+rect[width='8'][height='8'],
+rect[width='16'][height='16'] {
+    rx: 3 !important;
+    ry: 3 !important;
+}
+
 /* Offline Status - Gray */
 rect[fill='#82838b'] {
     fill: var(--offline);
 }
 .status_a423bd[style='background-color: rgb(130, 131, 139);'] {
     background-color: var(--offline) !important;
+    border-radius: 3px !important;
 }
 
 /* Online Status - Green */
@@ -1015,6 +1059,7 @@ path[fill='var(--status-positive)'] {
 }
 .status_a423bd[style='background-color: rgb(67, 162, 90);'] {
     background-color: var(--online) !important;
+    border-radius: 3px !important;
 }
 
 /* Idle/Away Status - Yellow */
@@ -1023,6 +1068,7 @@ rect[fill='#ca9654'] {
 }
 .status_a423bd[style='background-color: rgb(202, 150, 84);'] {
     background-color: var(--idle) !important;
+    border-radius: 3px !important;
 }
 
 /* DND Status - Red */
@@ -1031,6 +1077,7 @@ rect[fill='#d83a42'] {
 }
 .status_a423bd[style='background-color: rgb(216, 58, 66);'] {
     background-color: var(--dnd) !important;
+    border-radius: 3px !important;
 }
 
 /* Streaming Status - Purple */
@@ -1041,6 +1088,59 @@ rect[fill='#9147ff'] {
 /* Status activity indicators */
 div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(67, 162, 90); height: 10px; width: 25px;'] {
     background-color: var(--online) !important;
+}
+
+/* ============================================= */
+/* CUSTOM LOADING SCREEN - Palenight            */
+/* ============================================= */
+
+.content_a2f514 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+/* Hide default Discord spinner */
+.content_a2f514 > .spinner_a2f514 {
+    display: none !important;
+}
+
+/* Add custom Palenight ASCII logo */
+.content_a2f514::before {
+    display: block !important;
+    content: '    ____        __           _       __    __\A   / __ \\____ _/ /__  ____  (_)___ _/ /_  / /_\A  / /_/ / __ `/ / _ \\/ __ \\/ / __ `/ __ \\/ __/\A / ____/ /_/ / /  __/ / / / / /_/ / / / / /_  \A/_/    \\__,_/_/\\___/_/ /_/_/\\__, /_/ /_/\\__/  \A                            /____/              ' !important;
+    font-size: 18px !important;
+    font-family: monospace !important;
+    white-space: pre !important;
+    line-height: 1.2 !important;
+    background: linear-gradient(to right, var(--palenight-purple) 0%, var(--palenight-blue) 25%, var(--palenight-cyan) 75%, var(--palenight-purple) 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-size: 200% auto !important;
+    animation: palenight-loading-shine 1.5s linear infinite reverse !important;
+}
+
+/* Keep loading text visible */
+.text_a2f514 {
+    position: static !important;
+    color: var(--text-1) !important;
+}
+
+@keyframes palenight-loading-shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    50.0001% {
+        background-position: -100%, 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Settings Page Theme Extension */
@@ -1146,6 +1246,127 @@ textarea:focus,
 hr,
 [class*="divider"],
 .divider__95f7f {
+    border-color: var(--border) !important;
+}
+
+/* ============================================= */
+/* BETTERDISCORD SETTINGS FIX                   */
+/* ============================================= */
+
+/* BetterDiscord settings titles (Themes, Plugins, etc.) */
+#bd-settingspane-container h2,
+#bd-settingspane-container .bd-settings-title,
+.bd-settings-title,
+.bd-addon-list .bd-addon-header,
+.bd-settings-group h2 {
+    color: var(--text-0) !important;
+}
+
+/* BetterDiscord search bar */
+#bd-settingspane-container .bd-search-wrapper input,
+.bd-search-wrapper input,
+input[placeholder*="Search"],
+input[placeholder*="search"] {
+    background: var(--bg-3) !important;
+    color: var(--text-1) !important;
+    border: var(--border-thickness) solid var(--border) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+#bd-settingspane-container .bd-search-wrapper input:focus,
+.bd-search-wrapper input:focus {
+    border-color: var(--palenight-purple) !important;
+    box-shadow: 0 0 0 2px var(--active-2) !important;
+}
+
+/* BetterDiscord addon cards */
+.bd-addon-card {
+    background: var(--bg-3) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+}
+
+/* BetterDiscord addon titles and descriptions */
+.bd-addon-card .bd-title,
+.bd-addon-card .bd-name {
+    color: var(--text-0) !important;
+}
+
+.bd-addon-card .bd-description,
+.bd-addon-card .bd-description-wrap {
+    color: var(--text-1) !important;
+}
+
+/* BetterDiscord switches */
+.bd-switch,
+.bd-switch-body {
+    background: var(--bg-2) !important;
+}
+
+.bd-switch input:checked + .bd-switch-body {
+    background: var(--palenight-purple) !important;
+}
+
+/* ============================================= */
+/* USER AREA POPUP (Bottom Left)                */
+/* ============================================= */
+
+/* User profile popout/menu */
+.accountProfilePopoutWrapper__8f0de,
+[class*="accountProfilePopout"],
+.userPopout__590e2,
+.userPopoutOuter__390cb,
+[class*="userPopout"] {
+    background: var(--bg-3) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+}
+
+/* User profile popout header/banner */
+.banner_c0bea0,
+.profileBanner__6e540,
+[class*="profileBanner"],
+.userProfileOuterThemed__81bfc {
+    background: var(--bg-2) !important;
+}
+
+/* User profile popout body */
+.profileBadges__6e540,
+.body_c0bea0,
+.userInfoSection__03c37,
+[class*="userInfo"] {
+    background: var(--bg-3) !important;
+}
+
+/* User profile text */
+.userText__56e23,
+.username__88cdb,
+.discriminator__70a7b,
+.profileBadges__6e540,
+[class*="bodyTitle"],
+[class*="textarea"] {
+    color: var(--text-0) !important;
+}
+
+/* User profile buttons */
+.actionButtons_c0bea0,
+.actionButton__23cc6,
+[class*="actionButton"] button {
+    background: var(--active) !important;
+    color: var(--text-1) !important;
+    border: 1px solid var(--palenight-purple) !important;
+}
+
+.actionButton__23cc6:hover,
+[class*="actionButton"] button:hover {
+    background: var(--accent-4) !important;
+}
+
+/* User profile sections/dividers */
+.userProfileOuter_c0bea0,
+.section__8f0de,
+[class*="section"] {
+    background: var(--bg-3) !important;
     border-color: var(--border) !important;
 }
 
