@@ -390,6 +390,8 @@ body {
     [class*="mentionsBadge"] {
         background-color: var(--palenight-purple) !important;
         color: var(--text-0) !important;
+        border: none !important; /* Remove black border */
+        box-shadow: none !important; /* Remove any shadow that might appear as border */
     }
 
     /* Unread indicators */
@@ -633,7 +635,7 @@ div[style='display: flex; justify-content: center; align-items: center; border-r
 
 /* Loading screen background - match Palenight theme */
 .appMount_fbb6aa {
-    background: var(--bg-4) !important;
+    background: var(--bg-3) !important; /* Use darker sidebar color for loading screen */
 }
 
 .content_a2f514 {
@@ -664,10 +666,14 @@ div[style='display: flex; justify-content: center; align-items: center; border-r
     animation: palenight-loading-shine 1.5s linear infinite reverse !important;
 }
 
-/* Keep loading text visible */
+/* Keep loading text visible - "Did you know" section styling */
 .text_a2f514 {
     position: static !important;
-    color: var(--text-1) !important;
+    color: var(--text-2) !important; /* Use headings color for better visibility */
+    font-size: 14px !important;
+    text-align: center !important;
+    max-width: 500px !important;
+    padding: 0 20px !important;
 }
 
 @keyframes palenight-loading-shine {
@@ -792,6 +798,87 @@ hr,
 }
 
 /* ============================================= */
+/* MY ACCOUNT / PROFILE SETTINGS                */
+/* ============================================= */
+
+/* My Account profile card container */
+[class*="accountProfileCard"],
+[class*="userSettingsAccount"],
+.accountProfileCard__7b759,
+.background__6c5c7,
+.fieldList__96595 {
+    background: var(--bg-3) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+    color: var(--text-3) !important;
+}
+
+/* Profile preview/banner in My Account */
+[class*="userSettingsAccount"] [class*="background"],
+.background__6c5c7,
+.avatarWrapper__86eba,
+[class*="avatarUploader"] {
+    background: var(--bg-2) !important;
+    border-color: var(--border) !important;
+}
+
+/* My Account username, email, etc. */
+[class*="userSettingsAccount"] h2,
+[class*="userSettingsAccount"] h3,
+[class*="userSettingsAccount"] .username,
+.username_c0bea0,
+.fieldList__96595 .field__49875 {
+    color: var(--text-1) !important;
+}
+
+/* My Account labels and descriptions */
+[class*="userSettingsAccount"] label,
+[class*="userSettingsAccount"] [class*="description"],
+.fieldList__96595 .description_c0bea0 {
+    color: var(--text-3) !important;
+}
+
+/* My Account buttons (Edit, Copy, etc.) */
+[class*="userSettingsAccount"] button,
+.button__2ede7,
+.lookFilled__9c58b,
+.colorBrand_cdc393 {
+    background: var(--bg-2) !important;
+    color: var(--text-1) !important;
+    border: 1px solid var(--border) !important;
+}
+
+[class*="userSettingsAccount"] button:hover,
+.button__2ede7:hover,
+.lookFilled__9c58b:hover {
+    background: var(--bg-1) !important;
+    border-color: var(--palenight-purple) !important;
+}
+
+/* My Account input fields */
+[class*="userSettingsAccount"] input,
+[class*="userSettingsAccount"] textarea {
+    background: var(--bg-2) !important;
+    color: var(--text-1) !important;
+    border: 1px solid var(--border) !important;
+}
+
+[class*="userSettingsAccount"] input:focus,
+[class*="userSettingsAccount"] textarea:focus {
+    border-color: var(--palenight-purple) !important;
+    box-shadow: 0 0 0 2px var(--active-2) !important;
+}
+
+/* Profile customization sections */
+[class*="profileCard"],
+[class*="userProfileModalInner"],
+[class*="banner"],
+.userSettingsBanner__6c5c7 {
+    background: var(--bg-3) !important;
+    border-color: var(--border) !important;
+}
+
+/* ============================================= */
 /* BETTERDISCORD SETTINGS FIX                   */
 /* ============================================= */
 
@@ -883,6 +970,7 @@ input[placeholder*="search"] {
 .bd-switch-body {
     background: var(--bg-2) !important;
     border: 1px solid var(--border) !important;
+    border-radius: 12px !important; /* Rounded toggle body */
 }
 
 .bd-switch input:checked + .bd-switch-body {
@@ -892,17 +980,26 @@ input[placeholder*="search"] {
 
 .bd-switch-handle {
     background: var(--text-0) !important;
+    border-radius: 50% !important; /* Circular toggle handle */
 }
 
 /* BetterDiscord buttons */
 .bd-button {
-    background: var(--active) !important;
+    background: var(--bg-2) !important; /* Use subtle background instead of purple */
     color: var(--text-1) !important;
-    border: 1px solid var(--palenight-purple) !important;
+    border: 1px solid var(--border) !important; /* Use theme border instead of purple */
+    transition: background 0.2s ease, border-color 0.2s ease !important;
 }
 
 .bd-button:hover {
-    background: var(--accent-4) !important;
+    background: var(--bg-1) !important; /* Lighter on hover */
+    border-color: var(--palenight-purple) !important; /* Purple border on hover */
+}
+
+.bd-button:active,
+.bd-button.bd-button-filled {
+    background: var(--active) !important; /* Only active/filled buttons get purple background */
+    border-color: var(--palenight-purple) !important;
 }
 
 .bd-button.bd-button-danger {
@@ -1119,15 +1216,19 @@ input[placeholder*="search"] {
 
 /* Status badges positioning */
 .lowerBadge_cc5dd2 {
-    border: 2px solid var(--bg-3);
+    border: 2px solid var(--bg-3) !important;
+    border-radius: 50% !important; /* Make badges circular */
     bottom: -2px;
     right: -2px;
+    box-shadow: none !important; /* Remove any shadow that might cause black border */
 }
 
 .upperBadge_cc5dd2 {
-    border: 2px solid var(--bg-3);
+    border: 2px solid var(--bg-3) !important;
+    border-radius: 50% !important; /* Make badges circular */
     top: -2px;
     right: -2px;
+    box-shadow: none !important; /* Remove any shadow that might cause black border */
 }
 
 /* ============================================= */
