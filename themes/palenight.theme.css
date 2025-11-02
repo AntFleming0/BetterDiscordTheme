@@ -39,8 +39,8 @@ body {
 
     /* dms button options */
     --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
-    --dms-icon-svg-url: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82M7 5a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>'); /* icon svg url */
-    --dms-icon-svg-size: 90%; /* size of the svg */
+    --dms-icon-svg-url: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="white"><path d="M14.5 2H7.71l-.85-.85L6.51 1h-5l-.5.5v11l.5.5H7v-1H1.99V6h4.49l.35-.15.86-.86H14v1.5l-.001 4.508L13.5 11h-2.49v1H14l.5-.5v-9l-.5-.5zM2 5V2h4.29l.85.85.36.15H14v2H2zm6.5 7h-1V9h-3v3h-1V8.5l.5-.5h4l.5.5V12z"/></svg>'); /* VSCode Explorer icon */
+    --dms-icon-svg-size: 85%; /* size of the svg */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
     --custom-dms-background: off; /* off to disable, image to use a background image, color to use a custom color/gradient */

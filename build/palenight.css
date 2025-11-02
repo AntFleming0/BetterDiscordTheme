@@ -1295,130 +1295,132 @@ body {
     justify-content: center !important;
 }
 
-/* Status Indicator Colors - Enhanced Palenight Theme Colors */
+/* Status Indicator Colors - Palenight Theme with Shape Changes */
 
-/* Online Status - Green */
-[class*="statusItem"] [class*="status"][class*="online"],
-[class*="status"][class*="online"],
-rect[fill*="rgb(59, 165, 92)"],
-rect[mask*="online"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="online"],
-[class*="userStatusOnline"],
-[class*="statusOnline"],
-div[class*="avatar"] > [class*="statusIcon"][class*="online"]::after,
-div[class*="avatar"] > svg[class*="statusIcon"][class*="online"] {
-    fill: var(--online) !important;
-    color: var(--online) !important;
-    background-color: var(--online) !important;
+/* Offline Status - Gray */
+rect[fill='#82838b'],
+rect[fill='rgb(128, 131, 139)'],
+rect[fill='rgb(128, 132, 142)'] {
+    fill: var(--offline) !important;
+    rx: 3 !important; /* Rounded square shape */
+    ry: 3 !important;
+}
+.status_a423bd[style*='rgb(128, 131, 139)'],
+.status_a423bd[style*='rgb(128, 132, 142)'] {
+    background-color: var(--offline) !important;
+    border-radius: 3px !important; /* Rounded square */
 }
 
-/* Idle Status - Yellow */
-[class*="statusItem"] [class*="status"][class*="idle"],
-[class*="status"][class*="idle"],
-rect[fill*="rgb(240, 178, 50)"],
-rect[mask*="idle"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="idle"],
-[class*="userStatusIdle"],
-[class*="statusIdle"],
-div[class*="avatar"] > [class*="statusIcon"][class*="idle"]::after,
-div[class*="avatar"] > svg[class*="statusIcon"][class*="idle"] {
+/* Online Status - Green */
+rect[fill='#43a25a'],
+rect[fill='rgb(67, 162, 90)'],
+rect[fill='rgb(59, 165, 92)'],
+path[fill='#43a25a'],
+path[fill='var(--status-positive)'] {
+    fill: var(--online) !important;
+    rx: 3 !important;
+    ry: 3 !important;
+}
+.status_a423bd[style*='rgb(67, 162, 90)'],
+.status_a423bd[style*='rgb(59, 165, 92)'] {
+    background-color: var(--online) !important;
+    border-radius: 3px !important;
+}
+
+/* Idle/Away Status - Yellow */
+rect[fill='#ca9654'],
+rect[fill='#f0b232'],
+rect[fill='rgb(202, 150, 84)'],
+rect[fill='rgb(240, 178, 50)'] {
     fill: var(--idle) !important;
-    color: var(--idle) !important;
+    rx: 3 !important;
+    ry: 3 !important;
+}
+.status_a423bd[style*='rgb(202, 150, 84)'],
+.status_a423bd[style*='rgb(240, 178, 50)'] {
     background-color: var(--idle) !important;
+    border-radius: 3px !important;
 }
 
 /* DND Status - Red */
-[class*="statusItem"] [class*="status"][class*="dnd"],
-[class*="status"][class*="dnd"],
-rect[fill*="rgb(242, 63, 66)"],
-rect[mask*="dnd"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="dnd"],
-[class*="userStatusDND"],
-[class*="statusDND"],
-[class*="userStatusDoNotDisturb"],
-div[class*="avatar"] > [class*="statusIcon"][class*="dnd"]::after,
-div[class*="avatar"] > svg[class*="statusIcon"][class*="dnd"] {
+rect[fill='#d83a42'],
+rect[fill='#f23f42'],
+rect[fill='rgb(216, 58, 66)'],
+rect[fill='rgb(242, 63, 66)'] {
     fill: var(--dnd) !important;
-    color: var(--dnd) !important;
-    background-color: var(--dnd) !important;
+    rx: 3 !important;
+    ry: 3 !important;
 }
-
-/* Offline/Invisible Status - Gray */
-[class*="statusItem"] [class*="status"][class*="offline"],
-[class*="statusItem"] [class*="status"][class*="invisible"],
-[class*="status"][class*="offline"],
-[class*="status"][class*="invisible"],
-rect[fill*="rgb(128, 132, 142)"],
-rect[mask*="offline"],
-rect[mask*="invisible"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="offline"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="invisible"],
-[class*="userStatusOffline"],
-[class*="statusOffline"],
-[class*="userStatusInvisible"],
-[class*="statusInvisible"],
-div[class*="avatar"] > [class*="statusIcon"][class*="offline"]::after,
-div[class*="avatar"] > [class*="statusIcon"][class*="invisible"]::after,
-div[class*="avatar"] > svg[class*="statusIcon"][class*="offline"],
-div[class*="avatar"] > svg[class*="statusIcon"][class*="invisible"] {
-    fill: var(--offline) !important;
-    color: var(--offline) !important;
-    background-color: var(--offline) !important;
+.status_a423bd[style*='rgb(216, 58, 66)'],
+.status_a423bd[style*='rgb(242, 63, 66)'] {
+    background-color: var(--dnd) !important;
+    border-radius: 3px !important;
 }
 
 /* Streaming Status - Purple */
-[class*="statusItem"] [class*="status"][class*="streaming"],
-[class*="status"][class*="streaming"],
-rect[mask*="streaming"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="streaming"],
-[class*="userStatusStreaming"],
-[class*="statusStreaming"],
-div[class*="avatar"] > [class*="statusIcon"][class*="streaming"]::after,
-div[class*="avatar"] > svg[class*="statusIcon"][class*="streaming"] {
+rect[fill='#9147ff'],
+rect[fill='rgb(145, 71, 255)'] {
     fill: var(--streaming) !important;
-    color: var(--streaming) !important;
+    rx: 3 !important;
+    ry: 3 !important;
+}
+.status_a423bd[style*='rgb(145, 71, 255)'] {
     background-color: var(--streaming) !important;
+    border-radius: 3px !important;
+}
+
+/* Status activity indicators */
+div[style*='background-color: rgb(67, 162, 90)'] {
+    background-color: var(--online) !important;
 }
 
 /* Custom Loading Screen - Palenight Theme Loading Animation */
+/* Target all loading screens */
+.splash_b41f97,
+[class*="splash"],
 .loadingPopout_aa8da2,
 .loadingPopout__0ba2a,
-[class*="loadingPopout"],
-.splash_b41f97,
-[class*="appMount"] > [class*="app"] > div[class*="splash"] {
+[class*="loadingPopout"] {
     background: var(--bg-4) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
 }
 
-/* Hide default Discord loading elements */
-.splash_b41f97 > *:not(::before),
-[class*="splash"] > *:not(::before) {
+/* Hide default Discord loading graphics and text */
+.splash_b41f97 > *,
+[class*="splash"] > * {
     opacity: 0 !important;
-    display: none !important;
+    visibility: hidden !important;
 }
 
-/* Custom Palenight spinner */
-.splash_b41f97::before,
-.loadingPopout_aa8da2::before,
-.loadingPopout__0ba2a::before,
-[class*="appMount"] > [class*="app"] > div[class*="splash"]::before {
+/* Ensure our custom spinner is visible */
+.splash_b41f97::after,
+[class*="splash"]::after,
+.loadingPopout_aa8da2::after,
+.loadingPopout__0ba2a::after,
+[class*="loadingPopout"]::after {
     content: '' !important;
     position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
     width: 60px !important;
     height: 60px !important;
-    border: 4px solid var(--bg-3) !important;
+    border: 4px solid transparent !important;
     border-top-color: var(--palenight-purple) !important;
     border-right-color: var(--palenight-blue) !important;
+    border-bottom-color: var(--palenight-cyan) !important;
     border-radius: 50% !important;
-    animation: palenight-spin 0.8s linear infinite !important;
-    z-index: 9999 !important;
+    animation: palenight-loading-spin 0.8s linear infinite !important;
+    z-index: 99999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-@keyframes palenight-spin {
-    to {
-        transform: rotate(360deg);
+@keyframes palenight-loading-spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
