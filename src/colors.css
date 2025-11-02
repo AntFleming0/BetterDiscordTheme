@@ -32,8 +32,8 @@
     --accent-4: #7e57c2; /* accent buttons when hovered (button.hoverBackground) */
     --accent-5: #694CA4; /* accent buttons when clicked (scrollbarSlider.activeBackground) */
     --accent-new: #7e57c2; /* mute/deafen buttons */
-    --mention: linear-gradient(to right, rgba(117, 128, 184, 0.31) 40%, transparent); /* mentions (selection.background: #7580B850) */
-    --mention-hover: linear-gradient(to right, rgba(117, 128, 184, 0.2) 40%, transparent);
+    --mention: linear-gradient(to right, rgba(195, 232, 141, 0.35) 40%, transparent); /* mentions with green for better contrast (C3E88D) */
+    --mention-hover: linear-gradient(to right, rgba(195, 232, 141, 0.25) 40%, transparent);
     --reply: linear-gradient(to right, rgba(56, 61, 81, 0.5) 40%, transparent); /* replies (editor.selectionHighlightBackground) */
     --reply-hover: linear-gradient(to right, rgba(56, 61, 81, 0.35) 40%, transparent);
 
@@ -336,8 +336,8 @@ div[class*="panels"][class*="container"] {
         --live-stage-tile-border: var(--border);
         --logo-primary: var(--palenight-purple-light);
 
-        --mention-background: var(--palenight-blue);
-        --mention-foreground: var(--palenight-blue-light);
+        --mention-background: var(--palenight-green);
+        --mention-foreground: var(--text-0);
         --modal-background: var(--bg-4);
         --modal-footer-background: var(--bg-3);
 

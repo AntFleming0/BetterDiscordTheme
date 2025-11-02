@@ -246,8 +246,8 @@ body {
     --accent-4: #7e57c2; /* accent buttons when hovered (button.hoverBackground) */
     --accent-5: #694CA4; /* accent buttons when clicked (scrollbarSlider.activeBackground) */
     --accent-new: #7e57c2; /* mute/deafen buttons */
-    --mention: linear-gradient(to right, rgba(117, 128, 184, 0.31) 40%, transparent); /* mentions (selection.background: #7580B850) */
-    --mention-hover: linear-gradient(to right, rgba(117, 128, 184, 0.2) 40%, transparent);
+    --mention: linear-gradient(to right, rgba(195, 232, 141, 0.35) 40%, transparent); /* mentions with green for better contrast (C3E88D) */
+    --mention-hover: linear-gradient(to right, rgba(195, 232, 141, 0.25) 40%, transparent);
     --reply: linear-gradient(to right, rgba(56, 61, 81, 0.5) 40%, transparent); /* replies (editor.selectionHighlightBackground) */
     --reply-hover: linear-gradient(to right, rgba(56, 61, 81, 0.35) 40%, transparent);
 
@@ -550,8 +550,8 @@ div[class*="panels"][class*="container"] {
         --live-stage-tile-border: var(--border);
         --logo-primary: var(--palenight-purple-light);
 
-        --mention-background: var(--palenight-blue);
-        --mention-foreground: var(--palenight-blue-light);
+        --mention-background: var(--palenight-green);
+        --mention-foreground: var(--text-0);
         --modal-background: var(--bg-4);
         --modal-footer-background: var(--bg-3);
 
@@ -1285,9 +1285,14 @@ body {
 [class*="status"][class*="online"],
 rect[fill*="rgb(59, 165, 92)"],
 rect[mask*="online"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="online"] {
+svg[class*="status"] > rect[fill="currentColor"][mask*="online"],
+[class*="userStatusOnline"],
+[class*="statusOnline"],
+div[class*="avatar"] > [class*="statusIcon"][class*="online"]::after,
+div[class*="avatar"] > svg[class*="statusIcon"][class*="online"] {
     fill: var(--online) !important;
     color: var(--online) !important;
+    background-color: var(--online) !important;
 }
 
 /* Idle Status - Yellow */
@@ -1295,9 +1300,14 @@ svg[class*="status"] > rect[fill="currentColor"][mask*="online"] {
 [class*="status"][class*="idle"],
 rect[fill*="rgb(240, 178, 50)"],
 rect[mask*="idle"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="idle"] {
+svg[class*="status"] > rect[fill="currentColor"][mask*="idle"],
+[class*="userStatusIdle"],
+[class*="statusIdle"],
+div[class*="avatar"] > [class*="statusIcon"][class*="idle"]::after,
+div[class*="avatar"] > svg[class*="statusIcon"][class*="idle"] {
     fill: var(--idle) !important;
     color: var(--idle) !important;
+    background-color: var(--idle) !important;
 }
 
 /* DND Status - Red */
@@ -1305,9 +1315,15 @@ svg[class*="status"] > rect[fill="currentColor"][mask*="idle"] {
 [class*="status"][class*="dnd"],
 rect[fill*="rgb(242, 63, 66)"],
 rect[mask*="dnd"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="dnd"] {
+svg[class*="status"] > rect[fill="currentColor"][mask*="dnd"],
+[class*="userStatusDND"],
+[class*="statusDND"],
+[class*="userStatusDoNotDisturb"],
+div[class*="avatar"] > [class*="statusIcon"][class*="dnd"]::after,
+div[class*="avatar"] > svg[class*="statusIcon"][class*="dnd"] {
     fill: var(--dnd) !important;
     color: var(--dnd) !important;
+    background-color: var(--dnd) !important;
 }
 
 /* Offline/Invisible Status - Gray */
@@ -1319,18 +1335,222 @@ rect[fill*="rgb(128, 132, 142)"],
 rect[mask*="offline"],
 rect[mask*="invisible"],
 svg[class*="status"] > rect[fill="currentColor"][mask*="offline"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="invisible"] {
+svg[class*="status"] > rect[fill="currentColor"][mask*="invisible"],
+[class*="userStatusOffline"],
+[class*="statusOffline"],
+[class*="userStatusInvisible"],
+[class*="statusInvisible"],
+div[class*="avatar"] > [class*="statusIcon"][class*="offline"]::after,
+div[class*="avatar"] > [class*="statusIcon"][class*="invisible"]::after,
+div[class*="avatar"] > svg[class*="statusIcon"][class*="offline"],
+div[class*="avatar"] > svg[class*="statusIcon"][class*="invisible"] {
     fill: var(--offline) !important;
     color: var(--offline) !important;
+    background-color: var(--offline) !important;
 }
 
 /* Streaming Status - Purple */
 [class*="statusItem"] [class*="status"][class*="streaming"],
 [class*="status"][class*="streaming"],
 rect[mask*="streaming"],
-svg[class*="status"] > rect[fill="currentColor"][mask*="streaming"] {
+svg[class*="status"] > rect[fill="currentColor"][mask*="streaming"],
+[class*="userStatusStreaming"],
+[class*="statusStreaming"],
+div[class*="avatar"] > [class*="statusIcon"][class*="streaming"]::after,
+div[class*="avatar"] > svg[class*="statusIcon"][class*="streaming"] {
     fill: var(--streaming) !important;
     color: var(--streaming) !important;
+    background-color: var(--streaming) !important;
+}
+
+/* Custom Loading Screen - Palenight Theme Loading Animation */
+.loadingPopout_aa8da2,
+.loadingPopout__0ba2a,
+[class*="loadingPopout"],
+.splash_b41f97 {
+    background: var(--bg-4) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.splash_b41f97::before,
+.loadingPopout_aa8da2::before,
+.loadingPopout__0ba2a::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 50px !important;
+    height: 50px !important;
+    border: 3px solid var(--bg-3) !important;
+    border-top-color: var(--palenight-purple) !important;
+    border-radius: 50% !important;
+    animation: palenight-spin 1s linear infinite !important;
+}
+
+@keyframes palenight-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading spinner overlay */
+.loadingBg_b41f97,
+[class*="loadingBg"] {
+    background: var(--bg-4) !important;
+}
+
+.loadingAnimation_b41f97 {
+    background-color: transparent !important;
+}
+
+.loadingAnimation_b41f97::after {
+    background: linear-gradient(to right, var(--palenight-purple), var(--palenight-blue), var(--palenight-cyan)) !important;
+}
+
+/* Settings Page Theme Extension */
+.layers__050b9 /* settings container */,
+.container__aa8da /* settings container */,
+.container_fa2c6c /* settings modal */,
+[class*="settingsContainer"],
+.settingsContainer_c907f8 {
+    background: var(--bg-4) !important;
+    color: var(--text-1) !important;
+}
+
+/* Settings sidebar */
+.sidebarRegion__11fa4 /* settings sidebar */,
+.side_aa8da2 /* settings side */,
+[class*="sidebarRegion"],
+[class*="settingsSidebar"] {
+    background: var(--bg-3) !important;
+    border-right: var(--border-thickness) solid var(--border) !important;
+}
+
+/* Settings items and groups */
+.side_aa8da2 .item_aa8da2 /* settings item */,
+[class*="settingsItem"],
+.item_aa8da2 {
+    color: var(--text-3) !important;
+    background: transparent !important;
+    border-radius: var(--radius-sm) !important;
+    transition: all 0.2s ease !important;
+}
+
+.side_aa8da2 .item_aa8da2:hover /* settings item hover */,
+[class*="settingsItem"]:hover {
+    color: var(--text-1) !important;
+    background: var(--hover) !important;
+}
+
+.side_aa8da2 .item_aa8da2.selected_aa8da2 /* settings item selected */,
+[class*="settingsItem"][class*="selected"] {
+    color: var(--text-1) !important;
+    background: var(--active-2) !important;
+    border-left: 2px solid var(--palenight-purple) !important;
+    padding-left: calc(16px - 2px) !important;
+}
+
+/* Settings content */
+[class*="standardSidebarView"],
+.content_f0dbb1 /* settings content */ {
+    background: var(--bg-4) !important;
+    color: var(--text-3) !important;
+}
+
+/* Settings headers and titles */
+.ui-standard-sidebar-view [class*="content"] h1,
+.ui-standard-sidebar-view [class*="content"] h2,
+.title__4b10a /* settings title */ {
+    color: var(--text-1) !important;
+}
+
+/* Settings inputs and form elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea,
+[class*="input"],
+[class*="input"] input {
+    background: var(--bg-3) !important;
+    color: var(--text-1) !important;
+    border: var(--border-thickness) solid var(--border) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus,
+[class*="input"] input:focus {
+    border-color: var(--palenight-purple) !important;
+    box-shadow: 0 0 0 2px var(--active-2) !important;
+}
+
+/* Settings buttons */
+[class*="settingsButton"],
+.button_dd4f85 /* settings button */ {
+    background: var(--active) !important;
+    color: var(--text-1) !important;
+    border: 1px solid var(--palenight-purple) !important;
+    border-radius: var(--radius-sm) !important;
+    transition: all 0.2s ease !important;
+}
+
+[class*="settingsButton"]:hover,
+.button_dd4f85:hover {
+    background: var(--accent-4) !important;
+    box-shadow: 0 0 8px var(--active-2) !important;
+}
+
+/* Settings dividers and separators */
+hr,
+[class*="divider"],
+.divider__95f7f {
+    border-color: var(--border) !important;
+}
+
+/* Mention and @everyone tag styling for better readability */
+.wrapper__2d49 span /* role pill background */,
+.rolePill__8c0ed /* role pill */,
+[class*="mention"] /* any mention element */,
+[class*="roleReference"],
+.userMentionHighlight_a7c275 /* user mention highlight */ {
+    background-color: var(--palenight-green) !important;
+    color: var(--text-0) !important;
+}
+
+/* @everyone and @here specific styling */
+.wrapper__2d49 span[class*="pill"],
+[class*="wrapper"] [class*="pill"],
+.rolePill__8c0ed span {
+    background: var(--palenight-green) !important;
+    color: var(--text-0) !important;
+    font-weight: 600 !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+}
+
+/* Mention pills in messages - improved contrast */
+.mention,
+a.mention,
+span.mention,
+[class*="mention"] {
+    color: var(--text-0) !important;
+    background-color: var(--palenight-green) !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    font-weight: 600 !important;
+}
+
+/* Ensure text inside mentions is readable */
+.mention::before,
+span.mention::before {
+    content: '@' !important;
+    margin-right: 2px !important;
 }
 body {
     --top-bar-height: 32px;
