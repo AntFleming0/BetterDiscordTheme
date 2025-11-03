@@ -83,7 +83,7 @@
     .visual-refresh body,
     .visual-refresh .theme-dark:not(.custom-user-profile-theme),
     .visual-refresh .theme-light:not(.custom-user-profile-theme) {
-        --activity-card-background: var(--bg-3);
+        --activity-card-background: var(--bg-2); /* darker for activity cards */
         --alert-bg: red;
         --autocomplete-bg: var(--bg-3);
 
@@ -797,5 +797,24 @@
     .highlight {
         background: var(--accent-3);
         color: var(--text-0);
+    }
+
+    /* Override center panels to use lighter background */
+    .chatContent_f75fb0 /* chat */,
+    .peopleColumn__133bf /* online friends */,
+    .nowPlayingColumn__133bf /* active now */,
+    .scroller_c880e8 /* nitro page */,
+    .container_f391e3 > .content_f75fb0 /* message requests */,
+    .shop__6db1d /* shop */,
+    .searchResultsWrap_a9e706 /* search results */,
+    .container_f369db /* forum */,
+    .chat_fb64c9 /* new thread panel */,
+    .container_a592e1 /* server discovery */,
+    .callContainer_cb9592 /* vc container */,
+    .wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592 /* vc container when chat open */,
+    .callContainer__722ff /* stage */,
+    .chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
+    .chat_f75fb0 > .container__0b563 /* server channels and roles page */ {
+        background-color: var(--bg-4) !important; /* Lighter background for center content */
     }
 }
