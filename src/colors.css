@@ -98,30 +98,30 @@
         --background-message-highlight-hover: var(--reply-hover);
         --background-message-hover: var(--message-hover);
 
-        --background-primary: var(--bg-4); /* main chat area - lighter */
-        --background-secondary: var(--bg-3); /* sidebars - dark */
-        --background-secondary-alt: var(--bg-3); /* alternative sidebar - dark */
-        --background-tertiary: var(--bg-2); /* deepest background - darkest */
+        --background-primary: var(--bg-4); /* main chat area - lighter (seamless with base) */
+        --background-secondary: var(--bg-3); /* sidebars - darker panels */
+        --background-secondary-alt: var(--bg-3); /* alternative sidebar - darker panels */
+        --background-tertiary: var(--bg-4); /* deepest background - lighter base */
 
-        --bg-base-primary: var(--bg-4); /* screenshare window? */
-        --bg-base-secondary: var(--bg-3);
-        --bg-base-tertiary: var(--bg-2);
+        --bg-base-primary: var(--bg-4); /* base window - lighter */
+        --bg-base-secondary: var(--bg-4); /* base - lighter */
+        --bg-base-tertiary: var(--bg-4); /* base - lighter */
         --background-mod-subtle: var(--hover);
         --background-mod-normal: var(--active);
         --background-mod-strong: var(--active-2);
-        --background-base-low: var(--bg-4);
-        --background-base-lower: var(--bg-4);
-        --background-base-lowest: var(--bg-4);
-        --background-surface-high: var(--bg-3);
-        --background-surface-higher: var(--bg-3);
-        --background-surface-highest: var(--bg-3);
-        --bg-surface-overlay: var(--bg-4);
-        --bg-surface-raised: var(--bg-3);
-        --chat-background-default: var(--bg-3);
+        --background-base-low: var(--bg-3); /* panels - darker */
+        --background-base-lower: var(--bg-3); /* panels - darker */
+        --background-base-lowest: var(--bg-3); /* panels - darker */
+        --background-surface-high: var(--bg-3); /* elevated surfaces - darker */
+        --background-surface-higher: var(--bg-3); /* elevated surfaces - darker */
+        --background-surface-highest: var(--bg-3); /* elevated surfaces - darker */
+        --bg-surface-overlay: var(--bg-3); /* overlays - darker */
+        --bg-surface-raised: var(--bg-3); /* raised elements - darker */
+        --chat-background-default: var(--bg-4); /* chat bg - lighter (seamless) */
         --chat-text-muted: var(--text-5);
-        --input-background: var(--bg-3);
-        --modal-background: var(--bg-4);
-        --modal-footer-background: var(--bg-4);
+        --input-background: var(--bg-2); /* input fields - darker */
+        --modal-background: var(--bg-3); /* modals - darker panels */
+        --modal-footer-background: var(--bg-3); /* modal footer - darker */
 
         --background-modifier-accent: var(--hover);
         --background-modifier-active: var(--active);
@@ -468,7 +468,7 @@
         }
 
         .bg__960e4 /* main background */ {
-            background: var(--bg-3);
+            background: var(--bg-4); /* lighter base background */
         }
 
         .modeUnreadImportant__2ea32 .icon__2ea32,
@@ -490,11 +490,11 @@
         }
 
         .side_aa8da2 .item_aa8da2:hover /* settings tab */ {
-            background-color: var(--bg-3) !important;
+            background-color: var(--bg-2) !important; /* darker hover */
         }
         .side_aa8da2 .item_aa8da2:active,
         .side_aa8da2 .item_aa8da2.selected_aa8da2 {
-            background-color: var(--bg-2) !important;
+            background-color: var(--bg-1) !important; /* darkest when selected */
         }
 
         .quickSelectPopout_ebaca5 /* dm vc region select popout */,
@@ -502,12 +502,12 @@
         .voiceBar__7aaec /* n in voice bar (channel list) */,
         .mainCard_f369db /* form posts */,
         .accountProfileCard__1fed1 /* account settings profile background */ {
-            background-color: var(--bg-3);
+            background-color: var(--bg-3); /* darker panels */
         }
 
         .colorable_f1ceac.primaryDark_f1ceac,
         .reaction_f8896c /* forum post reaction */ {
-            background-color: var(--bg-2);
+            background-color: var(--bg-2); /* even darker */
         }
 
         .expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* folder icon */ {
