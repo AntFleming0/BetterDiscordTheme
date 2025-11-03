@@ -6,8 +6,8 @@ A beautiful dark Discord theme based on the Palenight (Mild Contrast) color sche
 
 ## Features
 
--   🎨 **Palenight Color Scheme** - Authentic Palenight colors with purple accents
--   ✨ **Rounded Corners** - Smooth, modern rounded corners throughout the interface
+-   🎨 **Palenight Color Scheme** - Authentic Palenight colors matching VS Code with purple accents
+-   ✨ **Sharp Corners** - Clean, minimal corners like VS Code for a cohesive experience
 -   🌙 **Dark & Comfortable** - Easy on the eyes for long Discord sessions
 -   ⚙️ **Highly Customizable** - Adjust colors, spacing, and behavior to your preference
 -   🎭 **Custom Icons** - Includes custom DM icons (light and dark variants)
@@ -61,12 +61,28 @@ The theme includes the full Palenight color palette. Edit `palenight.theme.css` 
 | Yellow         | `#FFCB6B` | Warnings, idle status         |
 | Red            | `#EF5350` | Errors, DND status            |
 
-### Rounded Corners
+### Border Radius (Corners)
 
-Adjust the border radius:
+Adjust the corner sharpness to your preference:
 
 ```css
---border-radius: 8px; /* Change to taste (0px for square corners) */
+/* Sharp corners like VS Code (default) */
+--radius-sm: 2px;
+--radius-md: 3px;
+--radius-lg: 4px;
+--radius-xl: 6px;
+
+/* More rounded (Discord-like) */
+--radius-sm: 4px;
+--radius-md: 8px;
+--radius-lg: 12px;
+--radius-xl: 16px;
+
+/* Completely square corners */
+--radius-sm: 0px;
+--radius-md: 0px;
+--radius-lg: 0px;
+--radius-xl: 0px;
 ```
 
 ### Custom DM Icons
@@ -74,7 +90,7 @@ Adjust the border radius:
 Switch between the included light and dark file icons:
 
 ```css
-/* Dark icon (default) */
+/* Dark icon */
 --dms-icon-svg-url: url('https://antfleming0.github.io/BetterDiscordTheme/assets/files_Dark.svg');
 
 /* Light icon */
@@ -126,6 +142,8 @@ DEV_OUTPUT_PATH=C:\Users\USERNAME\AppData\Roaming\Vencord\themes\palenight-dev.t
 
 **Window Controls Inspiration**: [Tokyo Night](https://github.com/Dyzean/Tokyo-Night)
 
+**AI Assistance**: This theme was adapted and customized with the assistance of AI (GitHub Copilot) to transform the Midnight Discord theme into a Palenight-themed variant with color scheme extraction, file restructuring, and documentation.
+
 Thanks to all the [contributors](https://github.com/refact0r/midnight-discord/graphs/contributors) to the original Midnight Discord theme!
 
 ## License
@@ -137,10 +155,14 @@ MIT License - Based on Midnight Discord theme by refact0r
 ### v1.0.0 (Initial Release)
 
 -   Initial Palenight theme release
--   Full Palenight color scheme implementation
--   Rounded corners throughout interface
--   Custom DM icons (light and dark variants)
+-   Full Palenight color scheme implementation matching VS Code exactly
+-   Sharp, minimal corners (VS Code-style) instead of rounded
+-   Lighter backgrounds (#292D3E editor, #25293A sidebar) for better visibility
+-   Custom DM icons (light variant as default)
+-   Accurate purple accent colors (#7e57c2)
+-   White text on notification badges
 -   Based on Midnight Discord v2.1.1
+-   Adapted with AI assistance
 
 ---
 

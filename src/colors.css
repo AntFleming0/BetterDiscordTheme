@@ -13,14 +13,14 @@
     --text-4: #6C739A; /* icon buttons and channels */
     --text-5: #697098; /* muted channels/chats and timestamps */
 
-    /* background and dark colors - Based on Palenight */
-    --bg-1: hsl(229, 20%, 24%); /* dark buttons when clicked */
-    --bg-2: hsl(229, 20%, 20%); /* dark buttons */
-    --bg-3: hsl(229, 20%, 17%); /* spacing, secondary elements */
-    --bg-4: hsl(229, 20%, 18%); /* main background color */
-    --hover: hsla(261, 51%, 51%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(261, 51%, 51%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(261, 51%, 51%, 0.3); /* extra state for transparent buttons */
+    /* background and dark colors - Based on Palenight (matching VS Code exactly) */
+    --bg-1: #2C2F40; /* dark buttons when clicked */
+    --bg-2: #232635; /* dark buttons */
+    --bg-3: #25293A; /* spacing, secondary elements (sidebar) */
+    --bg-4: #292D3E; /* main background color (editor) */
+    --hover: hsla(261, 51%, 56%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(261, 51%, 56%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(261, 51%, 56%, 0.3); /* extra state for transparent buttons */
     --message-hover: hsla(0, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors - Palenight Purple */
@@ -43,9 +43,9 @@
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
-    --border-light: hsl(261, 51%, 51%, 0.1); /* light border color */
-    --border: hsl(261, 51%, 51%, 0.2); /* normal border color */
-    --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --border-light: hsla(261, 51%, 56%, 0.1); /* light border color */
+    --border: hsla(261, 51%, 56%, 0.2); /* normal border color */
+    --button-border: hsla(0, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors - Palenight palette */
     --red-1: #FF5572;
