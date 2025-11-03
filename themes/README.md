@@ -1,20 +1,22 @@
-# Palenight Discord Theme<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/preview.png">
+# Palenight Discord Theme# Palenight Discord Theme<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/preview.png">
 
-A beautiful dark Discord theme based on the Palenight (Mild Contrast) color scheme from Visual Studio Code.# midnight
+A beautiful dark Discord theme based on the Palenight (Mild Contrast) color scheme from Visual Studio Code.A beautiful dark Discord theme based on the Palenight (Mild Contrast) color scheme from Visual Studio Code.# midnight
 
-## Installationa dark, customizable discord theme.
+## Installation## Installationa dark, customizable discord theme.
 
-1. Download the theme file, [`palenight.theme.css`](https://github.com/AntFleming0/BetterDiscordTheme/blob/main/palenight-discord-master/themes/palenight.theme.css)<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot1.png">
+1. Download the theme file, [`palenight.theme.css`](https://github.com/AntFleming0/BetterDiscordTheme/blob/main/themes/palenight.theme.css)1. Download the theme file, [`palenight.theme.css`](https://github.com/AntFleming0/BetterDiscordTheme/blob/main/palenight-discord-master/themes/palenight.theme.css)<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot1.png">
 
 2. Place it in your Discord themes folder
 
-3. Enable the theme in Discord settings<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot2.png">
+3. Enable the theme in Discord settings2. Place it in your Discord themes folder
 
-## Credits<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot3.png">
+## Credits3. Enable the theme in Discord settings<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot2.png">
 
-**Thanks to [refact0r](https://github.com/refact0r) for creating the original [Midnight Discord](https://github.com/refact0r/midnight-discord) theme structure and framework that this theme is based on.**## install
+**Thanks to [refact0r](https://github.com/refact0r) for creating the original [Midnight Discord](https://github.com/refact0r/midnight-discord) theme structure and framework that this theme is based on.**## Credits<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot3.png">
 
-This theme uses the Midnight Discord theme as a foundation and applies the Palenight color scheme with additional customizations.### vencord/betterdiscord (or any client that supports theme files)
+This theme uses the Midnight Discord theme as a foundation and applies the Palenight color scheme with additional customizations.**Thanks to [refact0r](https://github.com/refact0r) for creating the original [Midnight Discord](https://github.com/refact0r/midnight-discord) theme structure and framework that this theme is based on.**## install
+
+For full documentation, see the [main README](../README.md).This theme uses the Midnight Discord theme as a foundation and applies the Palenight color scheme with additional customizations.### vencord/betterdiscord (or any client that supports theme files)
 
 For full documentation, see the [main README](../README.md).1. download the theme file, [`midnight.theme.css`](https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css). (there should be a download button at the top right of the page)
 

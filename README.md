@@ -2,7 +2,7 @@
 
 A beautiful dark Discord theme based on the Palenight (Mild Contrast) color scheme from Visual Studio Code.
 
-![Palenight Theme Preview](https://github.com/AntFleming0/BetterDiscordTheme/raw/main/palenight-discord-master/assets/preview.png)
+![Palenight Theme Preview](https://github.com/AntFleming0/BetterDiscordTheme/raw/main/assets/preview.png)
 
 ## Features
 
@@ -22,13 +22,13 @@ This theme uses the Midnight Discord theme as a foundation and applies the Palen
 
 ### BetterDiscord / Vencord (or any client that supports theme files)
 
-1. Download the theme file, [`palenight.theme.css`](https://github.com/AntFleming0/BetterDiscordTheme/blob/main/palenight-discord-master/themes/palenight.theme.css). (there should be a download button at the top right of the page)
+1. Download the theme file, [`palenight.theme.css`](https://github.com/AntFleming0/BetterDiscordTheme/blob/main/themes/palenight.theme.css). (there should be a download button at the top right of the page)
 2. Drag the file into your theme folder. (there should be a button to open the theme folder in theme settings)
 3. (Optional) Customize the theme by editing the options in `palenight.theme.css`.
 
 ### Install Through Link
 
-Add `https://antfleming0.github.io/BetterDiscordTheme/palenight-discord-master/build/palenight.css` to your theme import links. You will need to copy the theme variables to your QuickCSS in order to customize the theme.
+Add `https://antfleming0.github.io/BetterDiscordTheme/build/palenight.css` to your theme import links. You will need to copy the theme variables to your QuickCSS in order to customize the theme.
 
 ## Customization
 
@@ -75,10 +75,10 @@ Switch between the included light and dark file icons:
 
 ```css
 /* Dark icon (default) */
---dms-icon-svg-url: url('https://antfleming0.github.io/BetterDiscordTheme/palenight-discord-master/assets/files_Dark.svg');
+--dms-icon-svg-url: url('https://antfleming0.github.io/BetterDiscordTheme/assets/files_Dark.svg');
 
 /* Light icon */
---dms-icon-svg-url: url('https://antfleming0.github.io/BetterDiscordTheme/palenight-discord-master/assets/files_Light.svg');
+--dms-icon-svg-url: url('https://antfleming0.github.io/BetterDiscordTheme/assets/files_Light.svg');
 
 /* Disable custom icon */
 --custom-dms-icon: off;
