@@ -1,5 +1,5 @@
 body {
-    --dms-icon-svg-url: url('https://antfleming0.github.io/BetterDiscordTheme/assets/files_Light.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-url: url('https://antfleming0.github.io/Palenight-Discord-Theme/assets/files_Light.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
